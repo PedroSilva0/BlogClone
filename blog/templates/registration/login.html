@@ -1,4 +1,4 @@
-{% extends ''blog/base.html' %}
+{% extends 'blog/base.html' %}
 
 
 {% block content %}
@@ -12,7 +12,7 @@
 
             <form action="{% url 'login' %}" method="post">
                 {% csrf_token %}
-                {% form.as_p %}
+                {{ form.as_p }}
 
                 <input type="submit" value="Login" class="btn btn-primary">
                 <input type="hidden" name="next" value="{{ next }}">
@@ -20,4 +20,3 @@
                 
     </div>
 {% endblock content %}
-    div.jumbotron
